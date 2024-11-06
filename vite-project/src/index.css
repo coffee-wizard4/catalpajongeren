@@ -1,0 +1,51 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    color: #0A2C00;
+}
+
+@font-face {
+    font-family: LouisGeorgeCage;
+    src: url('./assets/fonts/LouisGeorgeCafe.ttf');
+}
+
+@font-face {
+    font-family: LinLibertine_R;
+    src: url('./assets/fonts/LinLibertine_R.ttf');
+}
+
+.bg-catalpa-green {
+    background-color: #64942c;
+}
+
+.catalpa-green {
+    color: #64942c;
+}
+
+.bg-dark-green{
+    background-color: #0A2C00;
+}
+
+.dark-green{
+    color: #0A2C00;
+}
+
+.sofia {
+    font-family: "LouisGeorgeCage", sans-serif;
+}
+
+.argent {
+    font-family: "LinLibertine_R", sans-serif;
+}
+
+.custom-bg {
+    background-image: url('/images/jongentje.jpg');
+    background-position: 50% 30%;
+    background-size: cover;
+}
