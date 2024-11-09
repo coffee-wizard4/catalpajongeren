@@ -3,7 +3,6 @@ import GroeneHaven from './groenehaven';
 import Plaats from './plaats';
 import Missie from './missie';
 import WieBenIk from './wiebenik';
-import Coaching from './coaching';
 import Contact from './contact';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Missie/>
         <Plaats/>
         <GroeneHaven/>
-        <Coaching/>
         <WieBenIk/>
         <Contact/>
       </main>
