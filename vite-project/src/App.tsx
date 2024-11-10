@@ -1,9 +1,9 @@
-import Header from './header'
-import GroeneHaven from './groenehaven';
-import Plaats from './plaats';
-import Missie from './missie';
+import Header from './components/header'
+import GroeneHaven from './components/groenehaven';
+import Plaats from './components/plaats';
+import Missie from './components/missie';
 import WieBenIk from './wiebenik';
-import Contact from './contact';
+import Contact from './components/contact';
 
 function App() {
 
