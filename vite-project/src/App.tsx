@@ -4,6 +4,7 @@ import Plaats from './components/plaats';
 import Missie from './components/missie';
 import WieBenIk from './wiebenik';
 import Contact from './components/contact';
+import { Testimonials } from './components/testimonials';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Missie/>
         <Plaats/>
         <GroeneHaven/>
+        <Testimonials/>
         <WieBenIk/>
         <Contact/>
       </main>
