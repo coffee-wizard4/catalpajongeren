@@ -27,6 +27,9 @@ const Header : React.FC = () =>{
                             <Link to="groenehaven" spy={true} smooth={true} offset={-150} duration={150} onClick={handleNav} className="cursor-pointer">Groene Haven</Link>
                         </li>
                         <li>
+                            <Link to="testimonials" spy={true} smooth={true} offset={-150} duration={150} onClick={handleNav} className="cursor-pointer">Getuigenissen</Link>
+                        </li>
+                        <li>
                             <Link to="marie" spy={true} smooth={true} offset={-150} duration={150} onClick={handleNav} className="cursor-pointer">Wie ben ik</Link>
                         </li>
                         <li>
@@ -45,13 +48,16 @@ const Header : React.FC = () =>{
                                     <Link to="missie" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>Missie</Link>
                                 </li>
                                 <li>
-                                    <Link to="plaats" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>de plek</Link>
+                                    <Link to="plaats" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>De plek</Link>
                                 </li>
                                 <li>
-                                    <Link to="groenehaven" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>groene haven</Link>
+                                    <Link to="groenehaven" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>Groene haven</Link>
                                 </li>
                                 <li>
-                                    <Link to="marie" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>wie ben ik</Link>
+                                    <Link to="testimonials" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>Getuigenissen</Link>
+                                </li>
+                                <li>
+                                    <Link to="marie" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>Wie ben ik</Link>
                                 </li>
                                 <li>
                                     <Link to="contact" spy={true} smooth={true} offset={-125} duration={300} className="p-4 border-b  border-white" onClick={handleNav}>Contact</Link>

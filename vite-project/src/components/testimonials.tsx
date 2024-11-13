@@ -1,8 +1,17 @@
-import { motion } from "framer-motion"
+import {motion } from "framer-motion"
 import {FaArrowLeft, FaArrowRight} from "react-icons/fa"
 import { testimonial } from "../testimonial"
 import { useState } from "react"
 export const Testimonials : React.FC = () => {
+
+    const container = {
+        hidden:{opacity: 0},
+        visible:{opacity: 1, transition:{staggerChildren:0.1}}
+    }
+    const variants = {
+        visible:{opacity: 1, scale: 1},
+        hidden:{opacity:0, scale: 0.9}
+    }
 
     const testimonials: testimonial[] = [
         {
@@ -38,14 +47,14 @@ export const Testimonials : React.FC = () => {
         layout
         viewport={{amount: 0.1}}>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 w-full border-b">Getuigenissen</h2>
-            <div className="flex">
-                <button className="text-2xl px-8 py-2" onClick={() => swapTestimonial(false)}><FaArrowLeft/></button>
-                <div>
-                    <img src={testimonials[tmnIndex].img1[0]} alt={testimonials[tmnIndex].img1[1]} />
-                    <img src={testimonials[tmnIndex].img2[0]} alt={testimonials[tmnIndex].img2[1]} />
-                    <p>{testimonials[tmnIndex].text}</p>
-                </div>
-                <button className="text-2xl px-8 py-2" onClick={() => swapTestimonial(true)}><FaArrowRight/></button>
+            <div className="flex justify-center">
+                <motion.button whileHover={{scale:1.5}} whileTap={{scale:1}} className="text-2xl px-8 py-2 h-20 m-auto" onClick={() => swapTestimonial(false)}><FaArrowLeft/></motion.button>
+                <motion.div key={tmnIndex} initial="hidden" animate="visible" variants={container} className="grid grid-cols-2 w-3/4 gap-y-4 gap-x-4 h-[500px]">
+                    <motion.img variants={variants} className="w-96 rounded m-auto" src={testimonials[tmnIndex].img1[0]} alt={testimonials[tmnIndex].img1[1]} />
+                    <motion.img variants={variants} className="w-96 rounded m-auto" src={testimonials[tmnIndex].img2[0]} alt={testimonials[tmnIndex].img2[1]} />
+                    <motion.p variants={variants} className="col-span-2">{testimonials[tmnIndex].text}</motion.p>
+                </motion.div>
+                <motion.button whileHover={{scale:1.5}} whileTap={{scale:1}} className="text-2xl px-8 py-2 h-20 m-auto" onClick={() => swapTestimonial(true)}><FaArrowRight/></motion.button>
             </div>
         </motion.div>
         </>
