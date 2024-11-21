@@ -58,9 +58,9 @@ export const Testimonials : React.FC = () => {
             </div>
             <div className="md:hidden space-y-16">
                 {testimonials.map((testimonial) => (
-                    <div className="space-y-2">
-                        <img className="rounded w-96" src={testimonial.img2[0]} alt={testimonial.img2[1]} />
-                        <p className="border-b">{testimonial.text}</p>
+                    <div className="m-auto space-y-2">
+                        <img className="m-auto rounded w-96" src={testimonial.img2[0]} alt={testimonial.img2[1]} />
+                        <p className="m-auto p-2 border-b">{testimonial.text}</p>
                     </div>
                 ))}
             </div>
