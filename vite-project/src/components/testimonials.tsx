@@ -47,7 +47,7 @@ export const Testimonials : React.FC = () => {
         layout
         viewport={{amount: 0.1}}>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 w-full border-b">Getuigenissen</h2>
-            <div className="flex justify-center">
+            <div className="hidden md:flex justify-center">
                 <motion.button whileHover={{scale:1.5}} whileTap={{scale:1}} className="text-2xl px-8 py-2 h-20 m-auto" onClick={() => swapTestimonial(false)}><FaArrowLeft/></motion.button>
                 <motion.div key={tmnIndex} initial="hidden" animate="visible" variants={container} className="grid grid-cols-2 w-3/4 gap-y-4 gap-x-4 h-[500px]">
                     <motion.img variants={variants} className="w-96 rounded m-auto" src={testimonials[tmnIndex].img1[0]} alt={testimonials[tmnIndex].img1[1]} />
@@ -55,6 +55,14 @@ export const Testimonials : React.FC = () => {
                     <motion.p variants={variants} className="col-span-2">{testimonials[tmnIndex].text}</motion.p>
                 </motion.div>
                 <motion.button whileHover={{scale:1.5}} whileTap={{scale:1}} className="text-2xl px-8 py-2 h-20 m-auto" onClick={() => swapTestimonial(true)}><FaArrowRight/></motion.button>
+            </div>
+            <div className="md:hidden space-y-16">
+                {testimonials.map((testimonial) => (
+                    <div className="space-y-2">
+                        <img className="rounded w-96" src={testimonial.img2[0]} alt={testimonial.img2[1]} />
+                        <p className="border-b">{testimonial.text}</p>
+                    </div>
+                ))}
             </div>
         </motion.div>
         </>
